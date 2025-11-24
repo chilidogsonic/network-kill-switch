@@ -75,13 +75,13 @@ set ISCC_PATH=
 
 :: Check common Inno Setup installation paths
 if exist "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" (
-    set ISCC_PATH=C:\Program Files (x86)\Inno Setup 6\ISCC.exe
+    set "ISCC_PATH=C:\Program Files (x86)\Inno Setup 6\ISCC.exe"
 ) else if exist "C:\Program Files\Inno Setup 6\ISCC.exe" (
-    set ISCC_PATH=C:\Program Files\Inno Setup 6\ISCC.exe
+    set "ISCC_PATH=C:\Program Files\Inno Setup 6\ISCC.exe"
 ) else if exist "%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe" (
-    set ISCC_PATH=%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe
+    set "ISCC_PATH=%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe"
 ) else if exist "%ProgramFiles%\Inno Setup 6\ISCC.exe" (
-    set ISCC_PATH=%ProgramFiles%\Inno Setup 6\ISCC.exe
+    set "ISCC_PATH=%ProgramFiles%\Inno Setup 6\ISCC.exe"
 )
 
 if "!ISCC_PATH!"=="" (
