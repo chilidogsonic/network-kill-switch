@@ -51,6 +51,8 @@ Name: "startauto"; Description: "Start {#MyAppName} automatically when Windows s
 [Files]
 ; Main executable (will be built by PyInstaller)
 Source: "dist\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+; Icon files for system tray
+Source: "icons\*"; DestDir: "{app}\icons"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; PowerShell scripts for auto-startup
 Source: "setup_task_silent.ps1"; DestDir: "{app}"; Flags: ignoreversion
 Source: "uninstall_task.ps1"; DestDir: "{app}"; Flags: ignoreversion
@@ -112,9 +114,15 @@ end;
 
 // Called during uninstallation
 procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
+var
+  ResultCode: Integer;
 begin
   if CurUninstallStep = usUninstall then
   begin
+    // Kill any running instances of the app
+    Exec('taskkill', '/F /IM EthernetToggle.exe', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
+    Sleep(1000); // Wait for process to terminate
+
     // Remove scheduled task if it exists
     RemoveAutoStart();
   end;

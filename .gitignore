@@ -16,6 +16,9 @@ dist/
 # Inno Setup
 Output/
 
+# Generated icons (created from assets/)
+icons/
+
 # IDE
 .vscode/
 .idea/

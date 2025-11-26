@@ -10,7 +10,9 @@ A lightweight Windows system tray application that allows you to quickly toggle 
 
 - **System Tray Integration** - Lives quietly in your Windows system tray
 - 🔴🟢 **Visual Status Indicator** - Green = enabled, Red = disabled
-- **One-Click Toggle** - Right-click to enable/disable your Ethernet adapter
+- **Quick Toggle** - Left-click icon to instantly toggle, or right-click for menu
+- **Timer Function** - Disable adapter for 1 min, 2 min, 5 min, 30 min, or 1 hour
+- **Status Verification** - Automatically verifies adapter state after toggling
 - **Auto-Detection** - Automatically finds your Ethernet adapter
 - **Auto-Startup** - Optional "Start with Windows" during installation
 - **Standalone Installer** - No Python installation required
@@ -47,11 +49,22 @@ The uninstaller will automatically remove the app and auto-startup configuration
 ## Usage
 
 1. **Look for the icon** in your system tray (notification area)
-   - 🟢 Green circle = Ethernet enabled
-   - 🔴 Red circle = Ethernet disabled
+   - 🟢 Green icon = Ethernet enabled
+   - 🔴 Red icon = Ethernet disabled
 
-2. **Right-click the icon** to see the menu:
-   - **Toggle Ethernet (On/Off)** - Click to enable/disable your adapter
+2. **Quick Actions:**
+   - **Left-click** the icon to instantly toggle Ethernet on/off
+   - **Right-click** the icon for the full menu
+
+3. **Right-click Menu Options:**
+   - **Toggle Ethernet (On/Off)** - Enable/disable your adapter
+   - **Disable for...** - Temporary disable with auto-enable:
+     - 1 minute
+     - 2 minutes
+     - 5 minutes
+     - 30 minutes
+     - 1 hour
+     - Cancel Timer (restore immediately)
    - **Quit** - Close the application
 
 That's it! Simple and straightforward.
