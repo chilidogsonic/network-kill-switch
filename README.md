@@ -1,7 +1,7 @@
 # Network Kill Switch
 
 <p align="center">
-  <img src="assets/logofor_readme.png" alt="Network Kill Switch Logo" width="200"/>
+  <img src="assets/logofor_readme.png" alt="Network Kill Switch Logo" width="100%"/>
 </p>
 
 <p align="center">
@@ -15,32 +15,32 @@
   <img src="https://img.shields.io/badge/version-2.0.0-orange" alt="Version 2.0.0"/>
 </p>
 
-## 🔴 What is Network Kill Switch?
+## What is Network Kill Switch?
 
 Network Kill Switch is a powerful yet simple Windows utility that gives you instant control over your network connections. With a single click from your system tray, you can disable or enable all network adapters (Ethernet and WiFi) simultaneously. Perfect for privacy, security, focus time, or quick network troubleshooting.
 
-## ✨ Features
+## Features
 
-- **🎯 System Tray Integration** - Lives quietly in your Windows system tray
-- **🖱️ One-Click Toggle** - Left-click icon to instantly toggle all network adapters
-- **🔴🟢 Visual Status Indicators** - 🟢 Green = network enabled, 🔴 Red = network disabled
-- **🌐 Complete Network Control** - Toggles both Ethernet AND WiFi adapters together
-- **⏲️ Smart Timer Function** - Temporarily disable network with auto-restore:
+- **System Tray Integration** - Lives quietly in your Windows system tray
+- **One-Click Toggle** - Left-click icon to instantly toggle all network adapters
+- **Visual Status Indicators** - Green = network enabled, Red = network disabled
+- **Complete Network Control** - Toggles both Ethernet AND WiFi adapters together
+- **Smart Timer Function** - Temporarily disable network with auto-restore:
   - 1 minute
   - 2 minutes
   - 5 minutes
   - 30 minutes
   - 1 hour
-- **⏱️ Live Countdown Display** - See remaining time in real-time on the tray icon tooltip
-- **⚡ Loading Animation** - Visual feedback during network state changes
-- **✅ Status Verification** - Automatically verifies adapter state after toggling
-- **🔍 Auto-Detection** - Finds your physical network adapters automatically
-- **🚀 Auto-Startup** - Optional "Start with Windows" during installation
-- **📦 Standalone Installer** - No Python installation required
-- **💻 ARM Compatible** - Works on Windows on ARM via x64 emulation
-- **🪶 Lightweight** - Minimal resource usage (~20-30 MB installed)
+- **Live Countdown Display** - See remaining time in real-time on the tray icon tooltip
+- **Loading Animation** - Visual feedback during network state changes
+- **Status Verification** - Automatically verifies adapter state after toggling
+- **Auto-Detection** - Finds your physical network adapters automatically
+- **Auto-Startup** - Optional "Start with Windows" during installation
+- **Standalone Installer** - No Python installation required
+- **ARM Compatible** - Works on Windows on ARM via x64 emulation
+- **Lightweight** - Minimal resource usage (~20-30 MB installed)
 
-## 📸 Screenshots
+## Screenshots
 
 ### System Tray - Network Enabled (Green)
 ![Network Enabled](screenshots/network_on.png)
@@ -51,23 +51,23 @@ Network Kill Switch is a powerful yet simple Windows utility that gives you inst
 ### Timer Options Menu
 ![Timer Options](screenshots/timer_options.png)
 
-## 📥 Download & Installation
+## Download & Installation
 
 ### For End Users
 
-**[⬇️ Download Latest Release (v2.0.0)](https://github.com/chilidogsonic/network-kill-switch/releases/latest)**
+**[Download Latest Release (v2.0.0)](https://github.com/chilidogsonic/network-kill-switch/releases/latest)**
 
 1. **Download** `NetworkKillSwitch-Setup.exe` from the [Releases](https://github.com/chilidogsonic/network-kill-switch/releases) page
 2. **Run the installer** (requires administrator privileges)
 3. **Follow the installation wizard:**
    - Choose your installation directory (default: `C:\Program Files\Network Kill Switch`)
-   - ✅ Check "Start with Windows" to enable automatic startup (recommended)
+   - Check "Start with Windows" to enable automatic startup (recommended)
    - Click **Install**
 4. **Done!** The app will appear in your system tray immediately
 
 **No Python installation required!** The installer includes everything you need.
 
-### ❌ Uninstallation
+### Uninstallation
 
 1. Open **Windows Settings** → **Apps** → **Installed apps**
 2. Find **"Network Kill Switch"**
@@ -78,14 +78,14 @@ The uninstaller will automatically:
 - Remove the auto-startup configuration
 - Clean up all files and registry entries
 
-## 🎮 Usage Guide
+## Usage Guide
 
 ### Quick Start
 
 1. **Find the icon** in your system tray (notification area, bottom-right corner)
-   - 🟢 **Green icon** = Network enabled (at least one adapter is active)
-   - 🔴 **Red icon** = Network disabled (all adapters are off)
-   - ⏳ **Timer icon** = Temporary disable mode (will auto-restore)
+   - **Green icon** = Network enabled (at least one adapter is active)
+   - **Red icon** = Network disabled (all adapters are off)
+   - **Timer icon** = Temporary disable mode (will auto-restore)
 
 2. **Quick Actions:**
    - **Left-click** the icon → Instantly toggle all network adapters on/off
@@ -102,7 +102,7 @@ The uninstaller will automatically:
 
 When you select a timer option:
 1. All network adapters are immediately disabled
-2. The tray icon changes to the ⏱️ timer icon
+2. The tray icon changes to the timer icon
 3. **Hover over the icon** to see a live countdown (e.g., "Network: Disabled (Re-enabling in 4m 32s)")
 4. The network automatically restores when the timer expires
 5. You can click "Cancel Timer" or manually toggle to restore early
@@ -114,7 +114,7 @@ When you select a timer option:
 - **Virtual adapters:** VPN, Hyper-V, and other virtual adapters are excluded from control
 - **Administrator required:** The app must run with admin privileges to control network adapters
 
-## 🔧 For Developers
+## For Developers
 
 ### System Requirements
 
@@ -166,7 +166,7 @@ build_installer.bat
 - [Inno Setup 6](https://jrsoftware.org/isinfo.php) (for creating the installer)
 - PyInstaller (automatically installed by build script)
 
-## ⚠️ Troubleshooting
+## Troubleshooting
 
 <details>
 <summary><b>"Could not find network adapter" error</b></summary>
@@ -248,7 +248,7 @@ build_installer.bat
 - Verify PowerShell execution policy: `Get-ExecutionPolicy` (should be at least RemoteSigned)
 </details>
 
-## 🛠️ Technical Architecture
+## Technical Architecture
 
 ### Technology Stack
 
@@ -317,19 +317,19 @@ Network Kill Switch/
 └── LICENSE                   # MIT License
 ```
 
-## 📋 Version History
+## Version History
 
 ### Version 2.0.0 (Current)
 **Major Update: Rebranded from "Ethernet Toggle" to "Network Kill Switch"**
 
 **New Features:**
-- 🌐 Added WiFi adapter support (in addition to Ethernet)
-- ⏲️ Added timer function with 5 preset durations (1m, 2m, 5m, 30m, 1h)
-- ⏱️ Live countdown display in tooltip during timer mode
-- ⚡ Animated loading indicator during toggle operations
-- 🔄 Status verification after each toggle operation
-- 🖱️ Left-click quick toggle functionality
-- 🎨 Custom icon states (on, off, loading, timer)
+- Added WiFi adapter support (in addition to Ethernet)
+- Added timer function with 5 preset durations (1m, 2m, 5m, 30m, 1h)
+- Live countdown display in tooltip during timer mode
+- Animated loading indicator during toggle operations
+- Status verification after each toggle operation
+- Left-click quick toggle functionality
+- Custom icon states (on, off, loading, timer)
 
 **Improvements:**
 - Complete rebrand to "Network Kill Switch"
@@ -351,13 +351,13 @@ Network Kill Switch/
 
 For detailed change history, see [CHANGELOG.md](CHANGELOG.md).
 
-## 📜 License
+## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 **TL;DR:** You can use, modify, and distribute this software freely. No warranty is provided.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Here's how you can help:
 
@@ -388,33 +388,34 @@ Contributions are welcome! Here's how you can help:
 - Verify admin and non-admin scenarios
 - Update documentation for user-facing changes
 
-## 🌟 Acknowledgments
+## Acknowledgments
 
 - **[pystray](https://github.com/moses-palmer/pystray)** - Excellent system tray library
 - **[Pillow](https://python-pillow.org/)** - Powerful image processing
 - **Windows PowerShell Team** - Network adapter cmdlets
 - **Community Contributors** - Bug reports and feature suggestions
+- <a href="https://www.flaticon.com/free-icons/no-internet" title="no internet icons">No internet icons created by Yudhi Restu - Flaticon</a>
 
-## 📞 Support & Community
+## Support & Community
 
 - **Issues & Bugs:** [GitHub Issues](https://github.com/chilidogsonic/network-kill-switch/issues)
 - **Discussions:** [GitHub Discussions](https://github.com/chilidogsonic/network-kill-switch/discussions)
 - **Latest Release:** [Releases Page](https://github.com/chilidogsonic/network-kill-switch/releases)
 
-## ⭐ Star This Project!
+## Star This Project!
 
 If you find Network Kill Switch useful, please consider:
-- ⭐ Starring this repository
-- 🐛 Reporting bugs or suggesting features
-- 📢 Sharing with others who might benefit
-- 💬 Providing feedback
+- Starring this repository
+- Reporting bugs or suggesting features
+- Sharing with others who might benefit
+- Providing feedback
 
 Your support helps improve the project for everyone!
 
 ---
 
 <p align="center">
-  Made with ❤️ for the Windows community
+  Made for the Windows community
 </p>
 <p align="center">
   <sub>Network Kill Switch v2.0.0 | Windows 10/11</sub>
